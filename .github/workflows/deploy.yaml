@@ -4,12 +4,12 @@ on:
   push:
     branches: ["master"]
 
-josb:
+jobs:
   deploy-codigofacilito:
     runs-on: ubuntu-latest
     steps:
-      run: echo "Hacemos pull del Codigo"
-      run: echo "Correr Migraciones"
-      run: echo "Generar Binario"
-      run: echo "Publicar Version"
-      
+      - uses: "actions/checkout@v4"
+      - run: echo "Hacemos pull del Codigo"
+      - run: echo "Correr Migraciones"
+      - run: echo "Generar Binario"
+      - run: echo "Publicar Version"
